@@ -15,8 +15,46 @@
   -webkit-animation: outline 5s linear forwards;
   animation: outline 5s linear forwards;
   stroke-width:.5px;
+  stroke:#fff;
 
 }
+
+.underlineright {
+   stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  -webkit-animation: outlineright .3s linear forwards;
+  animation: outlineright .3s linear forwards;
+  stroke-width:4px;
+  animation-delay:2.5s;
+    stroke:#fff;
+
+
+}
+.underlineleft {
+   stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  -webkit-animation: outlineleft .3s linear forwards;
+  animation: outlineleft .3s linear forwards;
+  stroke-width:4px;
+  animation-delay:2.5s;
+    stroke:#fff;
+
+}
+
+@keyframes outlineleft {
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes outlineright {
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
 /*@keyframes outline {
 	from {
 	  stroke-dasharray: 20;
@@ -42,13 +80,34 @@
 .fills {
    stroke-dasharray: 60;
      stroke-dashoffset: 60;
-  -webkit-animation: outline 1.5s linear forwards;
-  animation: outline 1.5s linear forwards;
+  -webkit-animation: fill 1.5s linear forwards;
+  animation: fill 1.5s linear forwards;
   animation-delay:2s;
+	stroke-linejoin:round; 
+	  stroke:white;
 
 }
 
 
+@keyframes fill {
+  from {
+    stroke-width: 1px;
+  }
+  to {
+      stroke-dashoffset: 0;
+  }
+}
+
+
+
+
+.underline{
+    -webkit-transition: width 1s, height 1s;
+    -moz-transition: width 1s, height 1s;
+    -ms-transition: width 1s, height 1s;
+    transition: width 1s, height 1s;
+
+}
 .moutline{
 	
 }
@@ -328,7 +387,7 @@
 	</g>
 	<g id="_x31_A-Fill">
 		<line class="fills a1fill" fill="none" stroke="#1C1C1E" stroke-width="5" stroke-miterlimit="10" x1="90.1" y1="127.3" x2="100.1" y2="149.5"/>
-		<line class="fillsa1fill " fill="none" stroke="#1C1C1E" stroke-width="5" stroke-miterlimit="10" x1="90.4" y1="126.3" x2="80.6" y2="149.5"/>
+		<line class="fills a1fill " fill="none" stroke="#1C1C1E" stroke-width="5" stroke-miterlimit="10" x1="90.4" y1="126.3" x2="80.6" y2="149.5"/>
 		<line class="fills a1fill" fill="none" stroke="#1C1C1E" stroke-width="2" stroke-miterlimit="10" x1="78.4" y1="149.8" x2="81" y2="148.3"/>
 		<line class="fills a1fill" fill="none" stroke="#1C1C1E" stroke-width="2" stroke-miterlimit="10" x1="99.9" y1="147.6" x2="101.5" y2="150.2"/>
 		<polyline class="fills a1fill" fill="none" stroke="#1C1C1E" stroke-width="2" stroke-miterlimit="10" points="94.7,133.1 91,126.2 89.5,126.1 
@@ -387,6 +446,9 @@
 	<line class="fills rfill" fill="none" stroke="#1C1C1E" stroke-width="4" stroke-miterlimit="10" x1="39.8" y1="131" x2="39.8" y2="149.9"/>
 	<g>
 	</g>
+	<line class="underlineleft" fill="none" stroke="#1C1C1C" stroke-width="6" stroke-miterlimit="10" x1="228.8" y1="203" x2="156.8" y2="203"/>
+	<line class="underlineright" fill="none" stroke="#1C1C1C" stroke-width="6" stroke-miterlimit="10" x1="228.8" y1="203" x2="299.8" y2="203"/>
+
 	<g>
 	</g>
 	<g>
