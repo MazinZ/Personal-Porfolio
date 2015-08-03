@@ -10,61 +10,34 @@
 @charset "UTF-8";
 /* CSS Document */
 .outlines {
-   stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  -webkit-animation: outline 5s linear forwards;
-  animation: outline 5s linear forwards;
-  stroke-width:.5px;
-  stroke:#fff;
+
+  stroke:#1b1b1b;
 
 }
 
 .underlineright {
-   stroke-dasharray: 100;
-  stroke-dashoffset: 100;
-  -webkit-animation: outlineright .3s linear forwards;
-  animation: outlineright .3s linear forwards;
-  stroke-width:4px;
-  animation-delay:2.5s;
-    stroke:#fff;
+ 
+    stroke:#1b1b1b;
 
 
 }
 .underlineleft {
-   stroke-dasharray: 100;
-  stroke-dashoffset: 100;
-  -webkit-animation: outlineleft .3s linear forwards;
-  animation: outlineleft .3s linear forwards;
-  stroke-width:4px;
-  animation-delay:2.5s;
-    stroke:#fff;
+
+    stroke:#1b1b1b;
+
 }
 
 @keyframes outlineleft {
-  
-  90% {
-    stroke-dashoffset: 0;
-  }
-   100% {
-	x1:500;
-	stroke-dashoffset: 0;
 
+  100% {
+    stroke-dashoffset: 0;
   }
 }
 
 @keyframes outlineright {
 
-  90% {
+  100% {
     stroke-dashoffset: 0;
-  }
-  
-  100%{
-  	/*-webkit-transform: scaleX(1.3); 
-	transform: scaleX(1.3);*/
-	x1:500;
-	    stroke-dashoffset: 0;
-
-  
   }
 }
 
@@ -91,13 +64,8 @@
 }
 
 .fills {
-   stroke-dasharray: 60;
-     stroke-dashoffset: 60;
-  -webkit-animation: fill 1.5s linear forwards;
-  animation: fill 1.5s linear forwards;
-  animation-delay:2s;
-	stroke-linejoin:round; 
-	  stroke:white;
+
+	  stroke:black;
 
 }
 
@@ -459,7 +427,7 @@
 	<line class="fills rfill" fill="none" stroke="#1C1C1E" stroke-width="4" stroke-miterlimit="10" x1="39.8" y1="131" x2="39.8" y2="149.9"/>
 	<g>
 	</g>
-	<line id="test" class="underlineleft" fill="none" stroke="#1C1C1C" stroke-width="6" stroke-miterlimit="10" x1="228.8" y1="203" x2="156.8" y2="203"/>
+	<line class="underlineleft" fill="none" stroke="#1C1C1C" stroke-width="6" stroke-miterlimit="10" x1="228.8" y1="203" x2="156.8" y2="203"/>
 	<line class="underlineright" fill="none" stroke="#1C1C1C" stroke-width="6" stroke-miterlimit="10" x1="228.8" y1="203" x2="299.8" y2="203"/>
 
 	<g>
@@ -473,5 +441,4 @@
 	<g>
 	</g>
 </g>
-
 </svg>
