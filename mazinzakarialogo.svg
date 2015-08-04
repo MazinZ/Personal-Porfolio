@@ -15,7 +15,7 @@
   -webkit-animation: outline 5s linear forwards;
   animation: outline 5s linear forwards;
   stroke-width:.5px;
-  stroke:#fff;
+  stroke:#ab9626;
 
 }
 
@@ -26,7 +26,7 @@
   animation: outlineright .3s linear forwards;
   stroke-width:4px;
   animation-delay:2.5s;
-    stroke:#fff;
+    stroke:#ab9626;
 
 
 }
@@ -37,7 +37,7 @@
   animation: outlineleft .3s linear forwards;
   stroke-width:4px;
   animation-delay:2.5s;
-    stroke:#fff;
+    stroke:#ab9626;
 }
 
 @keyframes outlineleft {
@@ -97,7 +97,7 @@
   animation: fill 1.5s linear forwards;
   animation-delay:2s;
 	stroke-linejoin:round; 
-	  stroke:white;
+	  stroke:#ab9626;
 
 }
 
