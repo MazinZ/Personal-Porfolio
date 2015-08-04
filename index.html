@@ -21,7 +21,7 @@ h1{
 	margin-left:auto;
 	margin-right:auto;
 	width:550px;
-	letter-spacing:13px;
+	/*letter-spacing:13px;*/
 }
 
 
@@ -32,12 +32,13 @@ h1{
 	margin-right:auto;
 }
 
-p {
+#one p {
 	color:#474747;
 	font-family:"Gandhi Serif";
 	font-weight:400;
-	font-size:18px;
-	line-height:1.4;
+	/*font-size:18px;*/
+	line-height:1.5;
+	letter-spacing:.5px;
 	
 }
 
@@ -52,6 +53,16 @@ strong {
 	
 }
 
+hr {
+	height:1px;
+	width:14%;
+	color:#e0e0e0;
+	border:0; 
+	border-top: 1px solid #ccc;
+    padding: 0;
+	
+}
+
 .container{
 	width:440px;
 	height:230px;
@@ -61,6 +72,18 @@ strong {
 	padding-top:200px;
 
 }
+
+.headerDiv{
+	margin:0;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:60px;
+	margin-bottom:60px;
+	width:246px;
+	height:40.8px;
+	
+}
+
 #logoOverlay{
 	width:100%;	
 	height:100%;
@@ -121,8 +144,10 @@ strong {
 	top:0;
 	right:0;
 	z-index:8;
-	background-color:blue;
-	margin-top:210px;
+	/*background-color:blue;*/
+	background-color:#fff;
+	/*border: blue solid 1px; DEBUG */
+	margin-top:150px;
 	margin-left:auto;
 	margin-right:auto;
 	-webkit-transform: skew(18deg) rotate(-162deg);
@@ -141,7 +166,7 @@ strong {
 }
 
 .wrapper { 
-  border : 2px solid #000; 
+  /*border : 2px solid #000; DEBUG */
   overflow:hidden;
 }
 
@@ -154,13 +179,12 @@ strong {
   float:left; 
   margin-right:20px;
   width:300px;
-  border-right:2px solid #000;
+  /*border-right:2px solid #000; DEBUG */
 }
 #two { 
   background-color: white;
   overflow:hidden;
-  margin:10px;
-  border:2px dashed #ccc;
+  /*border:2px dashed #ccc; DEBUG */
   min-height:170px;
 }
 
@@ -170,7 +194,7 @@ strong {
     margin-right:0;
     width:auto;
     border:0;
-    border-bottom:2px solid #000;    
+    /*border-bottom:2px solid #000;  DEBUG */  
   }
 }
 
@@ -190,6 +214,11 @@ strong {
 @keyframes moveToTopp {
 	from { }
 	to { -webkit-transform: translateY(-200%); transform: translateY(-200%); }
+}
+
+.pt-page-moveToTop {
+	-webkit-animation: moveToTop .6s ease both;
+	animation: moveToTop .6s ease both;
 }
 
 .pt-page-moveToTopp {
@@ -257,8 +286,8 @@ to { -o-transform: rotate(-162deg) scale(1) skew(18deg) translate(0px); }
         </object>
 		</div> 
 </div>
-	<!--<div id="firstDiv" >
-    </div>-->
+	<div id="firstDiv" >
+    </div>
 
     <div id="mainDiv"  >
     	<div id="menuIcon"><object data="./hamburgericon.svg" type="image/svg+xml">
@@ -271,18 +300,25 @@ to { -o-transform: rotate(-162deg) scale(1) skew(18deg) translate(0px); }
             
     <div id="about" class="rotate">
     <div id = "aboutcontent">
-
+	<hr/>
+ 	<div class = "headerDiv">
+ 		<!--<object width="205px" height="34px" data="./aboutheader.svg" type="image/svg+xml">
+        </object>-->
+        <object  data="./aboutheader.svg" type="image/svg+xml">
+        </object>
+     </div>
    <div class="wrapper">
-   <h1 style="text-align:center;"> ABOUT </h1>
+   <!--<h1 style="text-align:center;"> ABOUT </h1>-->
+  
     <div id="one"><p>
-    Hi, I’m <strong>Mazin Zakaria</strong>, a 20 year old software developer, graphic designer and student of Computer Science at the University of Kentucky. I am  currently looking for an internship position for the Summer of 2016 to apply my skills in programming and design.
+    Hi, I’m <strong>Mazin Zakaria</strong>, a 20 year old software developer, graphic designer and student of Computer Science at the University of Kentucky. <u>I am  currently looking for an internship position for the Summer of 2016 to apply my skills in programming and design.</u>
     
     </p></div>
     <div id="two"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in tincidunt odio. Quisque sit amet nibh at erat suscipit venenatis. Cras cursus dapibus bibendum. Aliquam ante justo, consectetur vitae pulvinar id, malesuada vitae lorem. Maecenas et accumsan augue. Sed hendrerit ornare arcu bibendum eleifend.</p></div>
 </div>
         </div>
 </div>
-<div style="margin-top:300px; background-color:#000; width:100%; height:100%; position:relative;">
+<div style="margin-top:300px; background-color:#fff; width:100%; height:100%; position:relative;">
         <p>Hello World.</p>
         <p>@jonathansampson.</p>
         <p>This box is skewed.</p>
