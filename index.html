@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Untitled Document</title>
+<title>MAZIN ZAKARIA</title>
 <style>
 html, body{
         margin: 0px;
@@ -14,15 +14,57 @@ body{
 	background-color:#fff; /*f7f7f7*/
 	
 }
-h1{
-	font-size:50px;
+h1 a{
+	font-size:20px;
 	font-family:"Oak";
-	color:#1c1c1e;
+	color:#9b8821;
 	margin-left:auto;
 	margin-right:auto;
 	width:550px;
-	/*letter-spacing:13px;*/
+	letter-spacing:6px;
+	text-decoration: none;
+	  position: relative;
+
+
 }
+
+h1{
+	font-size:20px;
+	font-family:"Oak";
+	color:#1b1b1b;
+	margin-left:auto;
+	margin-right:auto;
+	width:550px;
+	letter-spacing:6px;
+}
+
+/* Hover animation */
+
+
+h1 > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  /*bottom: 0;*/
+  left: 0;
+  margin-top:3px;
+  background-color: #9b8821;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  margin-top:46px;
+}
+
+h1> a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/*                 */
 
 
 #logocontainer{
@@ -136,12 +178,12 @@ hr {
 
 }
 #menuIcon{
-	z-index:1;	
+	z-index:9;	
 	top:30px;
 	right:30px;
 	width:40px;
 	height:59px;
-	position:absolute;
+	position:fixed;
 	
 }
 
@@ -404,11 +446,14 @@ to { -o-transform: rotate(-162deg) scale(1) skew(18deg) translate(0px); }
      <object  data="./workheader.svg" type="image/svg+xml">
         </object>
     </div>
-    <p>8 years experience with Adobe Photoshop, Illustrator, Dreamweaver, <br> HTML and CSS</p>
+    
+    <h1><a href="#">VIEW RÉSUMÉ</a></h1>
+    
+    <p style="margin-top:40px;">8 years experience with Adobe Photoshop, Illustrator, Dreamweaver, <br> HTML and CSS</p>
     	<hr style="width:45px;"/>
     <p>High level of proficiency with Python, C++, C, JQuery and Operating systems</p>
        	<hr style="width:45px;"/>
-    <p>Familiarity with Swift, SQL, PHP, Unity, Django, Mathematica</p>
+    <p>Familiarity with Swift, SQL, PHP, Unity, Django and Mathematica</p>
 
 	</div>
 
