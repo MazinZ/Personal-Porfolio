@@ -32,6 +32,15 @@ h1{
 	margin-right:auto;
 }
 
+#work p {
+	color:#474747;
+	font-family:"Gandhi Serif";
+	font-weight:bold;
+	line-height:4;
+	letter-spacing:.5px;
+	
+}
+
 #one p {
 	color:#474747;
 	font-family:"Gandhi Serif";
@@ -41,6 +50,8 @@ h1{
 	letter-spacing:.5px;
 	
 }
+
+
 
 #two p {
 	color:#979797;
@@ -55,13 +66,15 @@ strong {
 
 hr {
 	height:1px;
-	width:14%;
+	width:109px;
 	color:#e0e0e0;
 	border:0; 
 	border-top: 1px solid #ccc;
     padding: 0;
 	
 }
+
+
 
 .container{
 	width:440px;
@@ -79,10 +92,19 @@ hr {
 	margin-right:auto;
 	margin-top:60px;
 	margin-bottom:60px;
-	width:246px;
-	height:40.8px;
-	
+
 }
+
+#about .headerDiv{
+	width:246px;
+	height:40.8px;		
+}
+
+#work .headerDiv{
+	width:246px;
+	height:40.8px;		
+}
+
 
 #logoOverlay{
 	width:100%;	
@@ -118,9 +140,45 @@ hr {
 	top:30px;
 	right:30px;
 	width:40px;
-	height:59p;
+	height:59px;
 	position:absolute;
 	
+}
+
+#fadeInMenu{
+	border-radius: 20px; 
+	-moz-border-radius: 20px; 
+	-webkit-border-radius: 20px; 
+	background-color:#fff;
+	padding:5px;
+	width:80px;
+	height:50px;
+	opacity:0.0;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
 }
 
 #about {
@@ -130,12 +188,29 @@ hr {
 	height:100%;
 	left:-15%;
 	background-color:#fff;
+	/*text-align:center;*/
    /* -webkit-transform: skewY(-5deg);
     -moz-transform: skewY(-5deg);
     -ms-transform: skewY(-5deg);
     -o-transform: skewY(-5deg);
     transform: skewY(-5deg);*/
 }
+
+#work {
+	z-index:7;
+	position:relative;
+	width:100%;
+	height:100%;
+	background-color:#fff;
+	text-align:center;
+   /* -webkit-transform: skewY(-5deg);
+    -moz-transform: skewY(-5deg);
+    -ms-transform: skewY(-5deg);
+    -o-transform: skewY(-5deg);
+    transform: skewY(-5deg);*/
+}
+
+
 
 #aboutcontent{
 	height:60%;
@@ -290,15 +365,17 @@ to { -o-transform: rotate(-162deg) scale(1) skew(18deg) translate(0px); }
 	<div id="firstDiv" >
     </div>
 
-    <div id="mainDiv"  >
+    <div id="mainDiv">
+   <!-- <div id="fadeInMenu">-->
     	<div id="menuIcon"><object data="./hamburgericon.svg" type="image/svg+xml">
         </object></div>
+       <!-- </div> -->
     	<div class="container">
 		<object width="440px" height="230px" data="./mazinzakarialogoblack.svg" type="image/svg+xml">
         </object>
         </div>
     </div>
-            
+ <div id="aboutWrapper">       
     <div id="about" class="rotate">
     <div id = "aboutcontent">
 	<hr/>
@@ -318,13 +395,24 @@ to { -o-transform: rotate(-162deg) scale(1) skew(18deg) translate(0px); }
     <div id="two"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in tincidunt odio. Quisque sit amet nibh at erat suscipit venenatis. Cras cursus dapibus bibendum. Aliquam ante justo, consectetur vitae pulvinar id, malesuada vitae lorem. Maecenas et accumsan augue. Sed hendrerit ornare arcu bibendum eleifend.</p></div>
 </div>
         </div>
+	</div>
 </div>
-<div style="margin-top:300px; background-color:#fff; width:100%; height:100%; position:relative;">
-        <p>Hello World.</p>
-        <p>@jonathansampson.</p>
-        <p>This box is skewed.</p>
-        <p>In supported browsers.</p>
+    <div id="work">
+    	<hr/>
+
+    <div class="headerDiv">
+     <object  data="./workheader.svg" type="image/svg+xml">
+        </object>
     </div>
+    <p>8 years experience with Adobe Photoshop, Illustrator, Dreamweaver, <br> HTML and CSS</p>
+    	<hr style="width:45px;"/>
+    <p>High level of proficiency with Python, C++, C, JQuery and Operating systems</p>
+       	<hr style="width:45px;"/>
+    <p>Familiarity with Swift, SQL, PHP, Unity, Django, Mathematica</p>
+
+	</div>
+
+
 
 <!--</div>-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -360,6 +448,20 @@ for (var i = 0; i < rightunderlines.length; i++) {
 	}
 });
 }*/
+
+
+$(document).scroll(function() {
+	fadeInMenuIcon();
+});
+
+function fadeInMenuIcon() {
+	if (!$( "#fadeInMenu" ).hasClass(".fadeIn")){
+		$("#fadeInMenu").addClass("fadeIn");
+	}
+}
+
+$('#aboutWrapper').height($("#about").height());
+
 $( document ).ready(function() {
 $('body').delay(3200).queue(function(){
         $('#firstDiv').addClass('pt-page-moveToTop').clearQueue();
