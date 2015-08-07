@@ -3,17 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <title>MAZIN ZAKARIA</title>
+  <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+
 <style>
 html, body{
         margin: 0px;
 	     height: 100%;
 		 overflow:hidden;
 		 padding:0;
+		 
 }
 body{
 	background-color:#fff; /*f7f7f7*/
 	
+	
 }
+
+::selection {
+  background: #b9b9b9; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #b9b9b9; /* Gecko Browsers */
+}
+
 h1 a{
 	font-size:20px;
 	font-family:"Oak";
@@ -87,7 +99,7 @@ h1> a:hover:before {
 	color:#474747;
 	font-family:"Gandhi Serif";
 	font-weight:bold;
-	/*font-size:18px;*/
+	font-size:18px;
 	line-height:1.4;
 	letter-spacing:.5px;
 	
@@ -96,7 +108,15 @@ h1> a:hover:before {
 
 
 #two p {
+	font-family:"Gandhi Serif";
 	color:#979797;
+	font-size:16px;
+}
+
+
+#contact p {
+	font-family:"Oak";
+	color:#474747;
 	font-size:16px;
 }
 
@@ -152,7 +172,7 @@ hr {
 	width:100%;	
 	height:100%;
 	position:absolute;
-	z-index:10;
+	z-index:21;
 	top:0;
 	
 	
@@ -162,7 +182,7 @@ hr {
 	width:100%;	
 	height:100%;
 	background-color:#0d0d0d;/*1a2535*/
-	z-index:9;
+	z-index:20;
 	position:absolute;
 
 }
@@ -178,7 +198,7 @@ hr {
 
 }
 #menuIcon{
-	z-index:9;	
+	z-index:10;	
 	top:30px;
 	right:30px;
 	width:40px;
@@ -188,14 +208,17 @@ hr {
 }
 
 #fadeInMenu{
-	border-radius: 20px; 
-	-moz-border-radius: 20px; 
-	-webkit-border-radius: 20px; 
+	border-radius: 15px; 
+	-moz-border-radius: 15px; 
+	-webkit-border-radius: 15px; 
 	background-color:#fff;
 	padding:5px;
-	width:80px;
-	height:50px;
-	opacity:0.0;
+	width:50px;
+	height:45px;
+	top:20px;
+	right:20px;
+	position:fixed;
+	z-index:9;
 }
 
 @-webkit-keyframes fadeIn {
@@ -230,6 +253,7 @@ hr {
 	height:100%;
 	left:-15%;
 	background-color:#fff;
+	overflow-x:hidden;
 	/*text-align:center;*/
    /* -webkit-transform: skewY(-5deg);
     -moz-transform: skewY(-5deg);
@@ -252,12 +276,31 @@ hr {
     transform: skewY(-5deg);*/
 }
 
+#contact {
+	z-index:7;
+	position:relative;
+	width:100%;
+	height:100%;
+	background-color:#fff;
+	text-align:center;
+}
+
+.email{
+	width:30px;
+	height:20px;
+	margin:0;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:15px;
+	margin-top:10px;
+}
+
 
 
 #aboutcontent{
 	height:60%;
 	/*width:700px;*/
-	width:40%;
+	width:45%;
 	top:0;
 	right:0;
 	z-index:8;
@@ -306,7 +349,8 @@ hr {
   line-height:1.5;
 }
 
-@media screen and (max-width: 400px) {
+
+@media screen and (max-width: 768px) {
    #one { 
     float: none;
     margin-right:0;
@@ -352,6 +396,7 @@ hr {
 -o-animation: cssAnimation 1.0473s 4 forwards;
 }
 
+
 /*.unrotate {
 -webkit-animation: cssAnimation 0s 1 forwards;
 -moz-animation: cssAnimation 0s 1 forwards;
@@ -383,6 +428,54 @@ from { -o-transform: rotate(-180deg) scale(1) skew(18deg) translate(0px); }
 to { -o-transform: rotate(-162deg) scale(1) skew(18deg) translate(0px); }
 }*/
 
+#gallery {
+  margin-top:50px;
+  width:630px;
+  clear:both;
+  margin-left:auto;
+  margin-right:auto;
+  font-family:"Oak";
+  font-size:14px;
+  
+}
+#first {
+  background-color:#fff;
+  width:200px;
+  height:200px;
+  float:left;
+  margin-right:15px;
+  background-image:url("./wordcloud.svg");
+}
+#second {
+  background-color:#fff;
+  width:200px;
+  height:200px;
+  float:left;
+  background-image:url("./cathackslogo.svg");
+
+}
+
+
+#third {
+  background-color:#fff;
+  width:200px;
+  height:200px;  
+  float:left;
+  cursor: pointer;
+  line-height:200px;
+    -o-transition:.3s;
+  -ms-transition:.3s;
+  -moz-transition:.3s;
+  -webkit-transition:.3s;
+  color:#474747;
+  margin-left:15px;
+}
+
+#third:hover{
+  color:#fff;
+  background-color:#c4b14d;
+}
+
 
 </style>
 <!--<link rel="stylesheet" type="text/css" href="css/default.css" />
@@ -397,6 +490,8 @@ to { -o-transform: rotate(-162deg) scale(1) skew(18deg) translate(0px); }
 </head>
 
 <body>
+  <div id="menuIcon"><object data="./hamburgericon.svg" type="image/svg+xml">
+        </object></div>
 <!--<div >--> <!--id="pt-main" class="pt-perspective"-->
 <div id="logoOverlay">
 	<div class="container">
@@ -408,9 +503,9 @@ to { -o-transform: rotate(-162deg) scale(1) skew(18deg) translate(0px); }
     </div>
 
     <div id="mainDiv">
+   
    <!-- <div id="fadeInMenu">-->
-    	<div id="menuIcon"><object data="./hamburgericon.svg" type="image/svg+xml">
-        </object></div>
+    	
        <!-- </div> -->
     	<div class="container">
 		<object width="440px" height="230px" data="./mazinzakarialogoblack.svg" type="image/svg+xml">
@@ -449,20 +544,32 @@ to { -o-transform: rotate(-162deg) scale(1) skew(18deg) translate(0px); }
     
     <h1><a href="#">VIEW RÉSUMÉ</a></h1>
     
-    <p style="margin-top:40px;">8 years experience with Adobe Photoshop, Illustrator, Dreamweaver, <br> HTML and CSS</p>
+    <p style="margin-top:40px;">8 years experience with Adobe Photoshop, Illustrator, HTML and CSS</p>
     	<hr style="width:45px;"/>
     <p>High level of proficiency with Python, C++, C, JQuery and Operating systems</p>
        	<hr style="width:45px;"/>
     <p>Familiarity with Swift, SQL, PHP, Unity, Django and Mathematica</p>
 
+<div id="gallery">
+  <div id="first"></div>
+  <div id="second"></div>
+  <div id="third">VIEW MORE</div>
+</div>
 	</div>
+    <div id="contact">
+    <h1> CONTACT </h1>
+    <img src="./emailicon.svg" class="email"/>
+    <p> 502.468.3855</p>
+    <p> mazin.zakaria@uky.edu </p>
+    </div>
 
-
+	
 
 <!--</div>-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="js/jquery.dlmenu.js"></script>
-<script src="js/pagetransitions.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
 
 <script>
 //var linesArray = document.getElementsByClassName("underlineleft");
@@ -493,6 +600,9 @@ for (var i = 0; i < rightunderlines.length; i++) {
 	}
 });
 }*/
+$(window).on('beforeunload', function() {
+    $(window).scrollTop(0);
+});
 
 
 $(document).scroll(function() {
